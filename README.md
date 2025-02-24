@@ -13,6 +13,11 @@
 
 This application is designed to collect data from respondents through a form and analyze it in real-time. It is intended for quantitative research with a specific focus on a case study related to diabetes. The data collected includes personal details, lifestyle habits, and other relevant factors that may influence health outcomes. The analysis uses various statistical methods and machine learning models to derive insights from the collected data.
 
+The goal of this study is to analyze the collected data in real-time using various statistical and machine learning techniques. By doing this, we hope to:
+- Identify key risk factors for diabetes,
+- Understand early warning signs and symptoms,
+- Provide insights for early intervention and prevention strategies.
+
 # Problem Statement
 
 Diabetes is increasingly becoming a major health challenge in our community. Despite growing awareness about its impact, many individuals remain at risk due to a combination of unhealthy lifestyle choices, poor dietary habits, physical inactivity, and socio-economic factors. The problem is compounded by the fact that many people are unaware of the early warning signs and risk factors, leading to delayed diagnoses and severe complications.
