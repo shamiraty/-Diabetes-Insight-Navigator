@@ -198,3 +198,7 @@ def dashboard(request):
         'data_height_list': data_height_list,
         'data_weight_list': data_weight_list,
     })
+    
+    
+def findings(request):
+    return render(request,'findings.html')

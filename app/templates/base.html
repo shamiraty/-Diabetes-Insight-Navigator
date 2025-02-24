@@ -1,0 +1,107 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Registration{% endblock %}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'bootstrap/css/bootstrap.min12.css' %}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    {% block css %}{% endblock %}
+
+    <style>
+      body { font-family: 'Roboto', sans-serif; }
+      .list-group-item { font-size: 1.2rem; border-radius: 0.5rem; }
+      .bg-light-custom { background-color: #f7f7f7 !important; }
+      .container { padding: 20px; }
+      .text-primary-custom { color: #007bff !important; }
+      .badge-custom { font-size: 1.2rem; border-radius: 1rem; }
+      .mt-5 { margin-top: 3rem !important; }
+      .list-group-item .badge { font-size: 1.2rem; }
+      .list-group-item .badge-custom { font-size: 1rem; }
+      .list-group-item i { margin-right: 10px; }
+
+      .container {
+          margin-top: 5px;
+          max-width: 800px;
+          background: white;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+        .select2-container--default .select2-selection--single {
+            height: 38px; /* Adjust as needed */
+            padding: 6px 12px; /* Adjust as needed */
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-sm bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'dashboard' %}"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'dashboard' %}">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'survey' %}">Survey</a>
+                </li>         
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'findings' %}">Findings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
+              </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Main content area -->
+    <div class="">
+      <div class="container text-center">
+          <!-- Logo and Title -->
+          <div class="d-flex justify-content-center align-items-center">
+              <img src="{% static 'img/logo7.gif' %}" alt="Logo" width="150" height="150" class="me-3">
+          </div>
+          <h1 class="text-center mt-1 text-primary-custom">Diabetes Risk Prediction</h1>
+          <i class="text-center">  comprehensive real-time health analytics & risk prediction system </i>
+      </div>
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Scripts -->
+    <script src="{% static 'bootstrap/js/jquery.js' %}"></script>
+    <script src="{% static 'bootstrap/js/jquery_ajax.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
+    <!-- DataTables and Buttons -->
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+
+    {% block js %}{% endblock %}
+</body>
+</html>

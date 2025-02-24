@@ -1,0 +1,209 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% block title %}{% endblock %}
+{% block css %}
+{% endblock %}
+{% load static %}
+
+<body class="bg-light">
+    <div class="container-fluid mt-5">
+        <!-- Header Card -->
+        <div class="card mb-4">
+            <div class="card-header bg-secondary text-white">
+                <h3>Diabetes Risk Prediction – Understanding the Results</h3>
+            </div>
+            <div class="card-body">
+                <p>We built a model to predict the likelihood of diabetes using different machine learning techniques. Below is a simplified explanation of what we found.</p>
+            </div>
+        </div>
+
+        <!-- Logistic Regression Section -->
+        <div class="card mb-4">
+            <div class="card-header bg-secondary  text-white">
+                <h4>1. Logistic Regression (Predicting Diabetes Risk)</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>Accuracy:</strong> 100% <span class="badge bg-danger">Unusual</span>
+                        <p>The model correctly predicted every case, indicating potential issues with the dataset or model.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Precision, Recall, and F1-Score:</strong> 1.00 <span class="badge bg-danger">Perfect Score</span>
+                        <p>This suggests the model made no false predictions, a rare occurrence.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>AUC (Area Under the Curve):</strong> 1.00 <span class="badge bg-danger">Perfect Separation</span>
+                        <p>The model perfectly distinguishes between those with and without diabetes.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Log Loss:</strong> 0.00 <span class="badge bg-danger">Too Perfect</span>
+                        <p>The model’s confidence in its predictions was flawless, raising concerns.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Intercept:</strong> 15.98 <span class="badge bg-warning">Baseline Value</span>
+                        <p>Represents the model's baseline prediction, though its significance is unclear due to perfect accuracy.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Random Forest Section -->
+        <div class="card mb-4">
+            <div class="card-header bg-secondary  text-white">
+                <h4>2. Random Forest (Alternative Prediction Model)</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>Accuracy:</strong> 100% <span class="badge bg-danger">Unusual</span>
+                        <p>This further suggests the possibility of data leakage or overfitting.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- K-Means Clustering Section -->
+        <div class="card mb-4">
+            <div class="card-header bg-warning text-dark">
+                <h4>3. K-Means Clustering (Finding Patterns in the Data)</h4>
+            </div>
+            <div class="card-body">
+                <p>The data was grouped into <strong>three clusters</strong>:</p>
+                <ul class="list-group">
+                    <li class="list-group-item">Cluster 2: 109 responses</li>
+                    <li class="list-group-item">Cluster 0: 105 responses</li>
+                    <li class="list-group-item">Cluster 1: 86 responses</li>
+                </ul>
+                <p><span class="badge bg-success">✅</span> The algorithm found natural groupings in the data, but further analysis is needed.</p>
+            </div>
+        </div>
+
+        <!-- ANOVA Test Section -->
+        <div class="card mb-4">
+            <div class="card-header bg-secondary  text-white">
+                <h4>4. ANOVA Test (Relationship Between Weight and Exercise)</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>F-Value:</strong> 7577.23 <span class="badge bg-success">Strong Relationship</span>
+                        <p>This indicates a strong relationship between weight and exercise.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>P-Value:</strong> 0.000 <span class="badge bg-success">Statistically Significant</span>
+                        <p>The p-value is below 0.05, confirming the relationship is statistically significant.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Weight Confidence Interval Section -->
+        <div class="card mb-4">
+            <div class="card-header bg-light text-dark">
+                <h4>5. Weight Confidence Interval (How Reliable Is the Weight Data?)</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>Mean Weight:</strong> 70.37 kg
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Standard Deviation:</strong> 13.38 kg
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Confidence Interval:</strong> 68.85 kg to 71.89 kg <span class="badge bg-info">95% Confidence</span>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Margin of Error:</strong> 1.52 kg
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Sample Size:</strong> 300
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Population Size:</strong> 1,000,000
+                    </li>
+                </ul>
+                <p><span class="badge bg-warning">✅</span> Sample size is small compared to population size; results should be interpreted cautiously.</p>
+            </div>
+        </div>
+
+        <!-- Regression Analysis Section -->
+        <div class="card mb-4">
+            <div class="card-header bg-secondary text-white">
+                <h4>6. Regression Analysis (Relationship Between Height and Weight)</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>R² (Coefficient of Determination):</strong> 0.516
+                        <p>This means height explains about <strong>51.6%</strong> of the variation in weight.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Slope (β₁):</strong> 65.90
+                        <p>For every <strong>1-unit increase in height</strong>, weight increases by <strong>65.90 units</strong>.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Intercept:</strong> -45.74
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Regression Equation:</strong> y = 65.90 * x - 45.74
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Sum of Squared Errors (SSE):</strong> 25,912.47
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Mean Squared Error (MSE):</strong> 86.37
+                    </li>
+                </ul>
+                <p><span class="badge bg-success">✅</span> Moderate correlation between height and weight.</p>
+            </div>
+        </div>
+
+        <!-- Key Takeaways Section -->
+        <div class="card mb-4">
+            <div class="card-header bg-secondary  text-white">
+                <h4>Key Takeaways & Concerns</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="badge bg-danger">🚩</span> Perfect Accuracy in Diabetes Prediction Models
+                        <p>Highly suspicious, requiring investigation.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge bg-info">✅</span> Height and Weight Have a Moderate Relationship
+                        <p>Height explains about 51.6% of the variation in weight.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge bg-info">✅</span> Weight and Exercise Are Strongly Related
+                        <p>Confirmed by the ANOVA test showing a statistically significant link.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge bg-warning">✅</span> The Study Sample is Small
+                        <p>The dataset has 300 responses, but we're predicting for a population of 1,000,000.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
