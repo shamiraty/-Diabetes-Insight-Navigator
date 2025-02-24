@@ -7,16 +7,29 @@
 - **Location**: Dodoma, Tanzania
 - **Email**: [sashashamsia@gmail.com](mailto:sashashamsia@gmail.com)
 - **WhatsApp**: [+255675839840](https://wa.me/255675839840)
-- **Youtube**: [Videos](https://www.youtube.com/channel/UCjepDdFYKzVHFiOhsiVVffQ)
-- **Live Demo**: [Demo](https://collegeforce.pythonanywhere.com/)
-- 
+  <!--- **Youtube**: [Videos](https://www.youtube.com/channel/UCjepDdFYKzVHFiOhsiVVffQ)-->
+
 # Introduction
 
 This application is designed to collect data from respondents through a form and analyze it in real-time. It is intended for quantitative research with a specific focus on a case study related to diabetes. The data collected includes personal details, lifestyle habits, and other relevant factors that may influence health outcomes. The analysis uses various statistical methods and machine learning models to derive insights from the collected data.
 
 # Problem Statement
 
-In order to better understand the impact of lifestyle choices and health behaviors on diabetes risk, this application aims to collect and analyze data in real-time. This data-driven approach allows for better decision-making and can potentially help in identifying key risk factors for diabetes among different populations.
+Diabetes is increasingly becoming a major health challenge in our community. Despite growing awareness about its impact, many individuals remain at risk due to a combination of unhealthy lifestyle choices, poor dietary habits, physical inactivity, and socio-economic factors. The problem is compounded by the fact that many people are unaware of the early warning signs and risk factors, leading to delayed diagnoses and severe complications.
+
+Key challenges include:
+
+- **High Prevalence:** Diabetes rates are rising, affecting a significant portion of the population, which places a heavy burden on individuals, families, and healthcare systems.
+- **Unhealthy Lifestyle:** Sedentary behavior, poor nutritional choices, and lack of regular exercise contribute heavily to the development of diabetes.
+- **Lack of Awareness:** Many individuals do not recognize the early symptoms or understand the risk factors that contribute to the onset of diabetes.
+- **Delayed Intervention:** Without early detection and timely intervention, diabetes can lead to serious health complications, increasing both the personal and economic costs.
+
+This application, **Diabetes Insight Navigator: Comprehensive Real-Time Health Analytics & Risk Prediction System**, addresses these challenges by collecting real-time data from respondents through structured forms. By analyzing factors such as age, weight, height, food preferences, exercise habits, and other lifestyle indicators, the system aims to:
+
+- Identify and monitor key risk factors for diabetes.
+- Provide insights into the early signs and potential causes of diabetes.
+- Support healthcare providers and policymakers in designing targeted prevention and intervention strategies.
+
 
 # Main Objective
 
